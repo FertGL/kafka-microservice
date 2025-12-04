@@ -9,7 +9,6 @@ import ru.gl.kafka_microservice.service.dto.CreateProductDto;
 import ru.gl.kafka_microservice.service.event.ProductCreatedEvent;
 
 import java.util.UUID;
-import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
 
 @Service
