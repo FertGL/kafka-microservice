@@ -5,8 +5,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.kafka.support.SendResult;
 import org.springframework.stereotype.Service;
+import ru.fertgl.core.ProductCreatedEvent;
 import ru.gl.kafka_microservice.service.dto.CreateProductDto;
-import ru.gl.kafka_microservice.service.event.ProductCreatedEvent;
 
 import java.util.UUID;
 import java.util.concurrent.ExecutionException;
