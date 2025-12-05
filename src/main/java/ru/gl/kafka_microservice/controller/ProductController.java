@@ -28,12 +28,13 @@ public class ProductController {
 
     @PostMapping
     public ResponseEntity<Object> createProduct(@RequestBody CreateProductDto createProductDto) {
+        String productId;
         try {
-            String productId = productService.createProduct(createProductDto);
+            productId = productService.createProduct(createProductDto);
         } catch (Exception e) {
             LOGGER.error(e.getMessage());
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(new ErrorMessage(new Date(), e.getMessage()));
         }
-        return ResponseEntity.status(HttpStatus.CREATED).body("");
+        return ResponseEntity.status(HttpStatus.CREATED).body(productId);
     }
 }
